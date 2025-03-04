@@ -12,3 +12,4 @@ console.log("1" + (2+2)) ;
 console.log((10+22) + "5") ;
 
 console.log(2 === 2) ; // Strict check it dont only check the value but also check the dataType
+

@@ -35,3 +35,6 @@ console.log(a.substring(0,4)) ;
 
 console.log(a.slice(-1,4)) ;
 
+let pp = "parth-Milind-Kulkarni" ;
+
+console.log(pp.split('-'))
