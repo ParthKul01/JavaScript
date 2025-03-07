@@ -37,3 +37,6 @@ const obj2 = {
 const obj3 = {...obj1,...obj2} ;
 console.log(obj3)
 
+console.log(Object.values(obj1))
+
+console.log(Object.keys(obj1))
