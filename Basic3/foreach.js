@@ -1,5 +1,5 @@
 
-const coding = ["js" ,"Python" ,"Java"] 
+/* const coding = ["js" ,"Python" ,"Java"] 
 
 /*coding.forEach( (i) => {
     console.log(i)
@@ -11,7 +11,7 @@ const coding = ["js" ,"Python" ,"Java"]
     }
 )("Parth")
 
-console.log(str) */ 
+console.log(str) 
 
 function printme(item) {
     console.log(item)
@@ -41,3 +41,9 @@ const myCoding = [
 myCoding.forEach( (item) => {
         console.log(item.name , " ", item.file)
 })
+
+*/
+
+
+
+
