@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    
+</body>
+
+<script>
+
+    function create(){
+        const result = document.createElement('h1')
+
+        result.innerHTML = "Hey this  is Me Parth" ;
+
+        document.body.appendChild(result)
+
+        const body = document.querySelector('body')
+        body.style.backgroundColor = "grey"
+        body.style.color = "red"
+    }
+
+    function edit(lang) {
+        const take = document.querySelector('h1') 
+
+        //take.innerHTML = lang
+        take.textContent = lang
+    }
+
+    create() ;
+
+    edit("Hey  this is Sneha ")
+
+
+</script>
+</html>
