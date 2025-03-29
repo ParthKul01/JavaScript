@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <button id = 'button'>Click Me</button>
+</body>
+
+<script>
+
+ let button = document.getElementById('button') ;
+ button.addEventListener('click',function(){
+
+    let body = document.querySelector('body') ;
+    body.style.backgroundColor  = 'pink' ;
+
+ }) ;
+
+ button.addEventListener('mouseover',function() {
+    
+    let body = document.querySelector('body') ;
+    body.style.backgroundColor  = 'Black' ;
+
+ }) ;
+
+ button.addEventListener('keydown',function() {
+    
+    let body = document.querySelector('body') ;
+    
+    let p = document.createElement('p')
+
+    p.innerHTML =  "<h1 style = 'color : red '>Hey this is Parth</h1>" ;
+
+    body.appendChild(p) ;
+
+ }) ;
+
+
+</script>
+
+</html>
