@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My Info on Github</h1>
+    <button id="fetch">Fetch Info</button>
+    <p></p>
+
+</body>
+<script>
+
+    const xml = new XMLHttpRequest() ;
+    let data ;
+    xml.open("GET","https://api.github.com/users/ParthKul01") ;
+
+    xml.onreadystatechange = function () {
+
+        console.log(this.responseText)
+        data  = JSON.parse(this.responseText) ;
+
+    }
+
+    document.querySelector("#fetch").
+    addEventListener('click',() => {
+
+        document.querySelector('p').
+        innerHTML = "Your User Name is : "+data.login+" you created your account on : "+data.created_at ;
+
+    }) ;
+
+    xml.send() ;
+
+    
+
+
+
+</script>
+</html>

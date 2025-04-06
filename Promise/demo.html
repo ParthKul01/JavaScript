@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Press Button to fetch the Data</h1>
+    <button id="fetch">Click me </button>
+    <p></p>
+</body>
+
+<script>
+
+ const button = document.querySelector('#fetch') 
+ const p = document.querySelector('p') ;
+
+ const xml = new XMLHttpRequest() ;
+
+ xml.open('GET',"https://api.github.com/users/ParthKul01") ;
+ let data  ;
+
+ let valid  ;
+
+ new Promise(function(resolve,reject){
+       valid = true;
+
+       setTimeout(function(){
+
+            if(!valid) {
+
+            button.addEventListener('click',() => {
+            xml.onreadystatechange = function() {
+                 console.log(this.responseText) ;
+
+                 data = JSON.parse(this.responseText) ;
+                 p.innerHTML = "Your Name is : "+data.login ;
+    
+            }
+            resolve("Promise Completed") ;
+            xml.send() ;
+          }) ;
+        } else  {
+            reject("Promise Rejected") ;
+        }
+       },1000)
+ }).then(function(msg) {
+     alert(msg) ;
+ }).catch(function(err){
+    alert(err) 
+})
+
+</script>
+
+</html>

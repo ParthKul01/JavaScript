@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p></p>
+
+</body>
+
+<script>
+
+  const xml = new XMLHttpRequest() ;
+
+  const url  = ' https://jsonplaceholder.typicode.com/users/1 '; 
+
+  xml.open('GET',url) ;
+
+  xml.onreadystatechange = function() {
+    
+    console.log(xml.readyState) ;
+    console.log(this.responseText) ;
+
+    const data = JSON.parse(this.responseText) ;
+
+    document.querySelector('p').innerHTML = "Name is : "+data.name+" Email is : "+data.email + " Adress is : "+data.address.street ;
+
+  }
+
+  xml.send() ;
+
+
+</script>
+</html>
